@@ -1,48 +1,67 @@
 import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import { Home, PieChart, CreditCard, User } from 'lucide-react-native';
 
 export default function Layout() {
   return (
     <Tabs
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === 'index') {
-            iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'info') {
-            iconName = focused ? 'information-circle' : 'information-circle-outline';
-          }
-
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: '#2563eb',
-        tabBarInactiveTintColor: 'gray',
+      screenOptions={{
+        tabBarActiveTintColor: '#4A6FD4',
+        tabBarInactiveTintColor: '#7B84A3',
         tabBarStyle: {
           paddingBottom: 5,
           paddingTop: 5,
+          borderTopColor: '#F0F0F5',
+          elevation: 0,
+          shadowOpacity: 0,
+          height: 60,
         },
         headerStyle: {
           backgroundColor: '#ffffff',
+          elevation: 0,
+          shadowOpacity: 0,
+          borderBottomWidth: 1,
+          borderBottomColor: '#F0F0F5',
         },
-        headerTintColor: '#2563eb',
+        headerTintColor: '#1A1A2E',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-      })}
+      }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => <Home size={size} color={color} />,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
-        name="info"
+        name="stats"
         options={{
-          title: 'Info',
-          tabBarLabel: 'Info',
+          title: 'Statistics',
+          tabBarLabel: 'Stats',
+          tabBarIcon: ({ color, size }) => <PieChart size={size} color={color} />,
+          headerShown: true,
+        }}
+      />
+      <Tabs.Screen
+        name="cards"
+        options={{
+          title: 'Cards',
+          tabBarLabel: 'Cards',
+          tabBarIcon: ({ color, size }) => <CreditCard size={size} color={color} />,
+          headerShown: true,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color, size }) => <User size={size} color={color} />,
+          headerShown: true,
         }}
       />
     </Tabs>

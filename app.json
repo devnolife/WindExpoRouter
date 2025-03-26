@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Finance App",
+    "slug": "finance-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "newArchEnabled": true,
+    "jsEngine": "hermes"
+  }
+} 
