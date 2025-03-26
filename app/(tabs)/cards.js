@@ -6,7 +6,7 @@ export default function CardsScreen() {
   const [showCardDetails, setShowCardDetails] = useState(false);
 
   return (
-    <SafeAreaView className="flex-1 bg-[#F8F9FC]">
+    <View className="flex-1 bg-[#F8F9FC]">
       <ScrollView className="flex-1 px-4 pt-4">
         <View className="flex-row justify-between items-center mb-6">
           <Text className="text-xl font-bold text-[#1A1A2E]">Your Cards</Text>
@@ -94,7 +94,7 @@ export default function CardsScreen() {
           <Text className="text-[#4A6FD4] font-medium ml-2">Add New Card</Text>
         </TouchableOpacity>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 
