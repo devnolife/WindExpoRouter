@@ -153,90 +153,117 @@ export default function HomePage() {
             <View className="flex items-center justify-center mb-4">
               <View className="w-10 h-1.5 bg-gray-300 rounded-full" />
             </View>
-            <View className="flex-row flex-wrap">
-              {[
-                { 
-                  name: 'Electricity', 
-                  icon: <BarChart2 size={24} color="#FF9800" />, 
-                  bgColor: 'bg-[#FFE0B2]', 
-                  borderColor: 'border-[#FFCC80]',
-                  route: '/payments/electricity' 
-                },
-                { 
-                  name: 'Investment', 
-                  icon: <TrendingUp size={24} color="#2196F3" />, 
-                  bgColor: 'bg-[#BBDEFB]', 
-                  borderColor: 'border-[#90CAF9]',
-                  route: '/payments/investment' 
-                },
-                { 
-                  name: 'Internet', 
-                  icon: <Wallet size={24} color="#4CAF50" />, 
-                  bgColor: 'bg-[#C8E6C9]', 
-                  borderColor: 'border-[#A5D6A7]',
-                  route: '/payments/internet' 
-                },
-                { 
-                  name: 'Education', 
-                  icon: <Play size={24} color="#673AB7" />, 
-                  bgColor: 'bg-[#D1C4E9]', 
-                  borderColor: 'border-[#B39DDB]',
-                  route: '/payments/education' 
-                },
-                { 
-                  name: 'Donations', 
-                  icon: <Users size={24} color="#F44336" />, 
-                  bgColor: 'bg-[#FFCDD2]', 
-                  borderColor: 'border-[#EF9A9A]',
-                  route: '/payments/donations' 
-                },
-                { 
-                  name: 'Games', 
-                  icon: <Sparkles size={24} color="#9C27B0" />, 
-                  bgColor: 'bg-[#E1BEE7]', 
-                  borderColor: 'border-[#CE93D8]',
-                  route: '/payments/games' 
-                },
-                { 
-                  name: 'EMoney', 
-                  icon: <CreditCard size={24} color="#03A9F4" />, 
-                  bgColor: 'bg-[#B3E5FC]', 
-                  borderColor: 'border-[#81D4FA]',
-                  route: '/payments/emoney' 
-                },
-                { 
-                  name: 'More', 
-                  icon: <Plus size={24} color="#8BC34A" />, 
-                  bgColor: 'bg-[#DCEDC8]', 
-                  borderColor: 'border-[#C5E1A5]',
-                  route: '/payments/more' 
-                },
-              ].map((item, index) => (
-                <TouchableOpacity
-                  key={item.name}
-                  className="w-1/4 px-2 mb-6"
-                  onPress={() => router.push(item.route)}
-                >
-                  <View className="items-center">
-                    <View 
-                      className={`w-16 h-16 ${item.bgColor} rounded-2xl items-center justify-center 
-                      border-2 ${item.borderColor} shadow-md mb-2 overflow-hidden`}
-                    >
-                      <LinearGradient
-                        colors={['rgba(255,255,255,0.8)', 'rgba(255,255,255,0)']}
-                        style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 20 }}
-                        start={{ x: 0.5, y: 0 }}
-                        end={{ x: 0.5, y: 1 }}
-                      />
-                      {item.icon}
-                    </View>
-                    <Text className="text-xs font-semibold text-primary text-center">{item.name}</Text>
-                  </View>
-                </TouchableOpacity>
-              ))}
+
+            <View className="flex-row flex-wrap justify-between">
+              {/* Electricity */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/electricity')}
+              >
+                <View className="w-16 h-16 bg-[#FFE0B2] rounded-full items-center justify-center mb-2">
+                  <BarChart2 size={24} color="#FF9800" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Electricity</Text>
+              </TouchableOpacity>
+
+              {/* Investment */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/investment')}
+              >
+                <View className="w-16 h-16 bg-[#BBDEFB] rounded-full items-center justify-center mb-2">
+                  <TrendingUp size={24} color="#2196F3" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Investment</Text>
+              </TouchableOpacity>
+
+              {/* Internet */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/internet')}
+              >
+                <View className="w-16 h-16 bg-[#C8E6C9] rounded-full items-center justify-center mb-2">
+                  <Wallet size={24} color="#4CAF50" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Internet</Text>
+              </TouchableOpacity>
+
+              {/* Education */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/education')}
+              >
+                <View className="w-16 h-16 bg-[#D1C4E9] rounded-full items-center justify-center mb-2">
+                  <Play size={24} color="#673AB7" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Education</Text>
+              </TouchableOpacity>
+
+              {/* Donations */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/donations')}
+              >
+                <View className="w-16 h-16 bg-[#FFCDD2] rounded-full items-center justify-center mb-2">
+                  <Users size={24} color="#F44336" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Donations</Text>
+              </TouchableOpacity>
+
+              {/* Games */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/games')}
+              >
+                <View className="w-16 h-16 bg-[#E1BEE7] rounded-full items-center justify-center mb-2">
+                  <Sparkles size={24} color="#9C27B0" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">Games</Text>
+              </TouchableOpacity>
+
+              {/* EMoney */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/emoney')}
+              >
+                <View className="w-16 h-16 bg-[#B3E5FC] rounded-full items-center justify-center mb-2">
+                  <CreditCard size={24} color="#03A9F4" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">EMoney</Text>
+              </TouchableOpacity>
+
+              {/* More */}
+              <TouchableOpacity 
+                className="w-[24%] items-center mb-6"
+                onPress={() => router.push('/payments/more')}
+              >
+                <View className="w-16 h-16 bg-[#DCEDC8] rounded-full items-center justify-center mb-2">
+                  <Plus size={24} color="#8BC34A" />
+                </View>
+                <Text className="text-xs font-semibold text-primary text-center">More</Text>
+              </TouchableOpacity>
             </View>
+
+
+            <TouchableOpacity 
+              className="bg-gradient-to-r from-[#3674B5] to-[#5790CB] mt-2 p-4 rounded-2xl"
+              onPress={() => router.push('/payments')}
+            >
+              <View className="flex-row items-center justify-between">
+                <View className="flex-row items-center">
+                  <View className="w-12 h-12 bg-white/20 rounded-full items-center justify-center mr-3">
+                    <Sparkles size={22} color="#ffffff" />
+                  </View>
+                  <View>
+                    <Text className="font-bold text-white text-base">Explore All Payments</Text>
+                    <Text className="text-xs text-white/80">Quick and secure payment options</Text>
+                  </View>
+                </View>
+                <ArrowUpRight size={22} color="#ffffff" />
+              </View>
+            </TouchableOpacity>
           </View>
-        </View>                                                  
+        </View>
       </ScrollView>
     </View>
   );
