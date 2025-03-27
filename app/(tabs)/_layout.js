@@ -7,10 +7,10 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#6C5CE7",
+        tabBarActiveTintColor: "#3674B5",
         tabBarInactiveTintColor: "#A0A0B9",
         tabBarStyle: {
-          backgroundColor: "#F8F9FE",
+          backgroundColor: "#ffffff",
           borderTopWidth: 0,
           elevation: 0,
           height: 85,
@@ -20,7 +20,7 @@ export default function TabsLayout() {
           left: 15,
           right: 15,
           borderRadius: 20,
-          shadowColor: "#6C5CE7",
+          shadowColor: "#3674B5",
           shadowOffset: {
             width: 0,
             height: 4,
@@ -46,9 +46,9 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View style={styles.iconContainer}>
-              <CreditCard size={24} color={color} strokeWidth={focused ? 2.5 : 1.5} />
+              <CreditCard size={24} color={focused ? "#3674B5" : "#A0A0B9"} strokeWidth={focused ? 2.5 : 1.5} />
             </View>
           ),
         }}
@@ -57,9 +57,9 @@ export default function TabsLayout() {
         name="stats"
         options={{
           title: "Statistics",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View style={styles.iconContainer}>
-              <BarChart2 size={24} color={color} strokeWidth={focused ? 2.5 : 1.5} />
+              <BarChart2 size={24} color={focused ? "#12CDD4" : "#A0A0B9"} strokeWidth={focused ? 2.5 : 1.5} />
             </View>
           ),
         }}
@@ -83,9 +83,9 @@ export default function TabsLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View style={styles.iconContainer}>
-              <User size={24} color={color} strokeWidth={focused ? 2.5 : 1.5} />
+              <User size={24} color={focused ? "#FF7A60" : "#A0A0B9"} strokeWidth={focused ? 2.5 : 1.5} />
             </View>
           ),
         }}
@@ -94,9 +94,9 @@ export default function TabsLayout() {
         name="info"
         options={{
           title: "Info",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View style={styles.iconContainer}>
-              <Info size={24} color={color} strokeWidth={focused ? 2.5 : 1.5} />
+              <Info size={24} color={focused ? "#FFCA28" : "#A0A0B9"} strokeWidth={focused ? 2.5 : 1.5} />
             </View>
           ),
         }}
@@ -114,11 +114,11 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: '#6C5CE7',
+    backgroundColor: '#0D92F4',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 25,
-    shadowColor: "#6C5CE7",
+    shadowColor: "#9747FF",
     shadowOffset: {
       width: 0,
       height: 4,
